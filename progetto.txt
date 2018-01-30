@@ -1,0 +1,3 @@
+mettere campi obbligatori registrazione;
+tabella per paese e provincia dell'utente;
+
