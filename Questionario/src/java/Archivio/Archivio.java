@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Archivio {
     
-     public ArrayList<Persona> persone;
+    /* public ArrayList<Persona> persone;
 
     public Archivio(ArrayList<Persona> persone) {
         this.persone = persone;
@@ -64,5 +64,5 @@ public class Archivio {
         }
         return false;
     }
-      
+  */    
 }

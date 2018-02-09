@@ -1,5 +1,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,9 +11,11 @@
         <form action="dati.jsp" method="post"> 
             <input placeholder="nome" type="text" name="nome"> <br>
             <input placeholder="cognome" type="text" name="cognome"> <br>
-            <input placeholder="ID" type="text" name="userID"> <br>
+            <input placeholder="cellulare" type="number" name="cellulare"> <br>
             <input placeholder="password" type="password" name="password"> almeno 6 caratteri alfanumerici <br>
             <input placeholder="email" type="text" name="email"> <br>
+            <input type="date" name="date">
+
             <br>
             <input class="button" type="submit" value="Registra" name="submit">
             <input class="button" type="button" value="Torna Login" onclick="window.location.href='index.jsp'">

@@ -1,5 +1,5 @@
 
-<%@page import="Archivio.Persona"%>
+<%@page import="Archivio.Utente"%>
 <%@page import="Archivio.Archivio"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -16,7 +16,7 @@
             String username="", password="";
             session.setMaxInactiveInterval(18000);
             
-            Persona p = new Persona();
+            Utente p = new Utente();
 
             Archivio archivio = (Archivio)application.getAttribute("archivio");
             
@@ -29,12 +29,12 @@
                 password=request.getParameter("password");
                 session.setAttribute("userID", username);
                 session.setAttribute("password", password);
-                p = new Persona("","",request.getParameter("userID"),request.getParameter("password"),"");
+                p = new Utente("","",request.getParameter("userID"),request.getParameter("password"),"");
                 session.setAttribute("persona", p);
 
             }
             
-            if(archivio.isPersona((Persona) session.getAttribute("persona"))){      
+            if(archivio.isUtente((Utente) session.getAttribute("persona"))){      
                 session.setAttribute(username,"userID");
                 session.setAttribute(password,"password");
                 out.write("login effettuato");
