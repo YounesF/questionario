@@ -14,7 +14,29 @@
             <input placeholder="cellulare" type="number" name="cellulare"> <br>
             <input placeholder="password" type="password" name="password"> almeno 6 caratteri alfanumerici <br>
             <input placeholder="email" type="text" name="email"> <br>
-            <input type="date" name="date">
+            Giorno: <select id="giorno" name="giorno">
+                <option value="1" selected> 1 </option>
+                <%   
+                    for(int i = 2; i <= 31; i++){ %>
+                    <option value="<%  out.write(Integer.toString(i)); %>"> <% out.write(Integer.toString(i)); }%> </option>
+                %>
+            </select>
+            
+            Mese <select id="mese" name="mese">
+                <option value="1" selected> 1 </option>
+                <%   
+                    for(int i = 2; i <= 12; i++){ %>
+                    <option value="<%  out.write(Integer.toString(i)); %>"> <% out.write(Integer.toString(i)); }%> </option>
+                %>
+            </select>    
+             
+            Anno <select id="anno" name="anno">
+                <option value="2018" selected> 2018 </option>
+                <%   
+                    for(Integer i = 2017; i <= 1900; i--){ %>
+                    <option value="<%  out.write(Integer.toString(i)); %>"> <% out.write(Integer.toString(i)); }%> </option>
+                %>
+            </select>
 
             <br>
             <input class="button" type="submit" value="Registra" name="submit">

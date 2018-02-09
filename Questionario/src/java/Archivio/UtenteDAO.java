@@ -14,21 +14,19 @@ public class UtenteDAO {
     static Connection conn;
     static PreparedStatement pst;
     
-    public static void insertUtente(Utente p){
+    public static void insertUtente(Utente u){
         
         try{
-            System.out.println(2);
             conn = PostgreSQLJDBC.getConn();
             pst = conn.prepareStatement("INSERT INTO utente VALUES (?, ?, ?, ?, ?, ?, ?)");
-            pst.setString(1, p.getNome());
-            pst.setString(2, p.getCognome());
-            pst.setString(3, Integer.toString(p.getCellulare()));
-            pst.setString(4, p.getEmail());
-            pst.setString(5, ConvertDate.convertStringToDate(p.getDataNascita()));
-            pst.setString(6, p.getPassword());
+            pst.setString(1, u.getNome());
+            pst.setString(2, u.getCognome());
+            pst.setString(3, Integer.toString(u.getCellulare()));
+            pst.setString(4, u.getEmail());
+            pst.setString(5, u.getData());
+            pst.setString(6, u.getPassword());
             pst.executeUpdate();
             conn.close();   
-            System.out.println(3);
         }
         
         catch(Exception e){

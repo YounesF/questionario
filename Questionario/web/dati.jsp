@@ -8,11 +8,23 @@
         <title>JSP Page</title>
 
     </head>
-        <jsp:useBean id="p" class="Utente"/>
-        <jsp:setProperty name="p" property="*"/>
     <body>
            <% 
-                 
+              String nome, cognome, email, password, data;
+              int cellulare, giorno, mese, anno;
+              
+              nome = request.getParameter("nome");
+              cognome = request.getParameter("cognome");
+              email = request.getParameter("email");
+              password = request.getParameter("password");
+              cellulare = Integer.parseInt(request.getParameter("cellulare"));
+              giorno = Integer.parseInt(request.getParameter("giorno"));
+              mese = Integer.parseInt(request.getParameter("mese"));
+              anno = Integer.parseInt(request.getParameter("anno"));
+              data = ConvertDate.convertDateToString(giorno, mese, anno);
+              
+              Utente utente = new Utente(nome,cognome,cellulare,email,password,data);
+              
             /*if(archivio.isUserIDTaken(userID)){
                response.sendRedirect("registra.jsp"); 
             }
@@ -26,8 +38,8 @@
                 response.sendRedirect("registra.jsp"); 
             }*/
             
-            UtenteDAO.insertUtente(p);
-            out.write("<br>");
+            UtenteDAO.insertUtente(utente);
+            out.write(utente.toString());
                       
            %> 
            

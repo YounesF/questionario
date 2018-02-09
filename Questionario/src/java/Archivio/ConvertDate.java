@@ -26,4 +26,24 @@ public class ConvertDate {
         }
         return dateString;
     }
+    public static String convertDateToString(int giorno, int mese, int anno){
+        String s = new String();
+        s="";
+        if(giorno<10){
+            s=s.concat("0"+Integer.toString(giorno));
+        }
+        else{
+            s=s.concat(Integer.toString(giorno));
+        }
+        s=s.concat("/");
+        if(mese<10){
+            s=s.concat("0"+Integer.toString(giorno));
+        }
+        else{
+            s=s.concat(Integer.toString(giorno));
+        }
+        s=s.concat("/");
+        s=s.concat(Integer.toString(anno));
+        return s;
+    }
 }

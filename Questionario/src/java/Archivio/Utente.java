@@ -17,17 +17,16 @@ public class Utente implements Serializable {
     private String cognome;
     private int cellulare;
     private String email;
-    private Date dataNascita;
     private String password;
+    private String data;
 
-    public Utente(String nome, String cognome, int cellulare, String password, String email, Date dataNascita ) {
+    public Utente(String nome, String cognome, int cellulare, String email, String password, String data) {
         this.nome = nome;
         this.cognome = cognome;
         this.cellulare = cellulare;
-        this.password = password;
         this.email = email;
-        this.dataNascita = dataNascita;
-        
+        this.data = data;
+        this.password = password;
     }
 
     public Utente(){
@@ -66,14 +65,6 @@ public class Utente implements Serializable {
         this.email = email;
     }
 
-    public Date getDataNascita() {
-        return dataNascita;
-    }
-
-    public void setDataNascita(Date dataNascita) {
-        this.dataNascita = dataNascita;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -82,10 +73,22 @@ public class Utente implements Serializable {
         this.password = password;
     }
 
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
     @Override
     public String toString() {
-        return "Utente{" + "nome=" + nome + ", cognome=" + cognome + ", cellulare=" + cellulare + ", email=" + email + ", dataNascita=" + dataNascita + ", password=" + password + '}';
+        return "Utente{" + "nome=" + nome + ", cognome=" + cognome + ", cellulare=" + cellulare + ", email=" + email + ", password=" + password + ", data=" + data + '}';
     }
+
+  
+
+    
 
     
 }
