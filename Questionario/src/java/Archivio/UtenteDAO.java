@@ -5,6 +5,12 @@
  */
 package Archivio;
 import java.sql.*;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 /**
  *
  * @author sala.stefano
@@ -18,13 +24,16 @@ public class UtenteDAO {
         
         try{
             conn = PostgreSQLJDBC.getConn();
-            pst = conn.prepareStatement("INSERT INTO utente VALUES (?, ?, ?, ?, ?, ?, ?)");
+            pst = conn.prepareStatement("INSERT INTO utente VALUES (?, ?, ?, ?, ?, 'hbskdfhb', 1923)");
             pst.setString(1, u.getNome());
             pst.setString(2, u.getCognome());
-            pst.setString(3, Integer.toString(u.getCellulare()));
+            pst.setInt(3, u.getCellulare());
             pst.setString(4, u.getEmail());
-            pst.setString(5, u.getData());
-            pst.setString(6, u.getPassword());
+            //pst.setString(5, u.getData());
+            DateFormat df = new SimpleDateFormat("yyyy/MM/gg");
+            Date date = df.parse(u.getData());
+            pst.setDate(5, ConvertDate.convertJavaDateToSqlDate(date));
+            //pst.setString(6, u.getPassword());
             pst.executeUpdate();
             conn.close();   
         }
