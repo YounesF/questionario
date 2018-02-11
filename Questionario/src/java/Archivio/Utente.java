@@ -8,7 +8,7 @@ package Archivio;
 
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 import java.util.Objects;
 
 public class Utente implements Serializable {
@@ -18,9 +18,9 @@ public class Utente implements Serializable {
     private int cellulare;
     private String email;
     private String password;
-    private String data;
+    private Date data;
 
-    public Utente(String nome, String cognome, int cellulare, String email, String password, String data) {
+    public Utente(String nome, String cognome, int cellulare, String email, String password, Date data) {
         this.nome = nome;
         this.cognome = cognome;
         this.cellulare = cellulare;
@@ -73,11 +73,11 @@ public class Utente implements Serializable {
         this.password = password;
     }
 
-    public String getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(Date data) {
         this.data = data;
     }
 

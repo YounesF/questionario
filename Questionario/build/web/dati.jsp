@@ -1,5 +1,7 @@
 
-<%@page import="java.sql.Date"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.DateFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" import="Archivio.*"%>
 <!DOCTYPE html>
 <html>
@@ -10,20 +12,21 @@
     </head>
     <body>
            <% 
-              String nome, cognome, email, password, data;
-              int cellulare, giorno, mese, anno;
+              String nome, cognome, email, password, dataString;
+              int cellulare;
+              Date date;
               
               nome = request.getParameter("nome");
               cognome = request.getParameter("cognome");
               email = request.getParameter("email");
               password = request.getParameter("password");
               cellulare = Integer.parseInt(request.getParameter("cellulare"));
-              giorno = Integer.parseInt(request.getParameter("giorno"));
-              mese = Integer.parseInt(request.getParameter("mese"));
-              anno = Integer.parseInt(request.getParameter("anno"));
-              data = ConvertDate.convertDateToString(giorno, mese, anno);
+              out.write(request.getParameter("nascita"));
+              dataString = request.getParameter("nascita");
+              date = ConvertString.convertStringToDate(dataString);
+              out.write(date.toString());
               
-              Utente utente = new Utente(nome,cognome,cellulare,email,password,data);
+              Utente utente = new Utente(nome,cognome,cellulare,email,password,date);
               
             /*if(archivio.isUserIDTaken(userID)){
                response.sendRedirect("registra.jsp"); 
@@ -40,6 +43,8 @@
             
             UtenteDAO.insertUtente(utente);
             out.write(utente.toString());
+            
+            
                       
            %> 
            

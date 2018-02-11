@@ -6,6 +6,7 @@
 package Archivio;
 
 import java.sql.Date;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 /**
@@ -13,19 +14,7 @@ import java.text.SimpleDateFormat;
  * @author firari.younes
  */
 public class ConvertDate {
-   public static String convertStringToDate(Date indate){
-        String dateString = null;
-        SimpleDateFormat sdfr = new SimpleDateFormat("yyyy/MM/dd");
-        /*you can also use DateFormat reference instead of SimpleDateFormat 
-         * like this: DateFormat df = new SimpleDateFormat("dd/MMM/yyyy");
-         */
-        try{
-             dateString = sdfr.format( indate );
-        }catch (Exception ex ){
-             System.out.println(ex);
-        }
-        return dateString;
-    }
+  
     public static String convertDateToString(int giorno, int mese, int anno){
         String s = new String();
         s="";
@@ -37,10 +26,10 @@ public class ConvertDate {
         }
         s=s.concat("/");
         if(mese<10){
-            s=s.concat("0"+Integer.toString(giorno));
+            s=s.concat("0"+Integer.toString(mese));
         }
         else{
-            s=s.concat(Integer.toString(giorno));
+            s=s.concat(Integer.toString(mese));
         }
         s=s.concat("/");
         s=s.concat(Integer.toString(anno));
