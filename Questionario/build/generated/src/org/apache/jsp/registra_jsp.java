@@ -54,50 +54,10 @@ public final class registra_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <form action=\"dati.jsp\" method=\"post\"> \n");
       out.write("            <input placeholder=\"nome\" type=\"text\" name=\"nome\"> <br>\n");
       out.write("            <input placeholder=\"cognome\" type=\"text\" name=\"cognome\"> <br>\n");
-      out.write("            <input placeholder=\"cellulare\" type=\"number\" name=\"cellulare\"> <br>\n");
+      out.write("            <input placeholder=\"cellulare\" type=\"text\" name=\"cellulare\"> <br>\n");
       out.write("            <input placeholder=\"password\" type=\"password\" name=\"password\"> almeno 6 caratteri alfanumerici <br>\n");
       out.write("            <input placeholder=\"email\" type=\"text\" name=\"email\"> <br>\n");
-      out.write("            Giorno: <select id=\"giorno\" name=\"giorno\">\n");
-      out.write("                <option value=\"1\" selected> 1 </option>\n");
-      out.write("                ");
-   
-                    for(int i = 2; i <= 31; i++){ 
-      out.write("\n");
-      out.write("                    <option value=\"");
-  out.write(Integer.toString(i)); 
-      out.write("\"> ");
- out.write(Integer.toString(i)); }
-      out.write(" </option>\n");
-      out.write("                %>\n");
-      out.write("            </select>\n");
-      out.write("            \n");
-      out.write("            Mese <select id=\"mese\" name=\"mese\">\n");
-      out.write("                <option value=\"1\" selected> 1 </option>\n");
-      out.write("                ");
-   
-                    for(int i = 2; i <= 12; i++){ 
-      out.write("\n");
-      out.write("                    <option value=\"");
-  out.write(Integer.toString(i)); 
-      out.write("\"> ");
- out.write(Integer.toString(i)); }
-      out.write(" </option>\n");
-      out.write("                %>\n");
-      out.write("            </select>    \n");
-      out.write("             \n");
-      out.write("            Anno <select id=\"anno\" name=\"anno\">\n");
-      out.write("                <option value=\"2018\" selected> 2018 </option>\n");
-      out.write("                ");
-   
-                    for(Integer i = 2017; i <= 1900; i--){ 
-      out.write("\n");
-      out.write("                    <option value=\"");
-  out.write(Integer.toString(i)); 
-      out.write("\"> ");
- out.write(Integer.toString(i)); }
-      out.write(" </option>\n");
-      out.write("                %>\n");
-      out.write("            </select>\n");
+      out.write("            <input type=\"date\" id=\"nascita\" name=\"nascita\" min=\"1900-01-01\">\n");
       out.write("\n");
       out.write("            <br>\n");
       out.write("            <input class=\"button\" type=\"submit\" value=\"Registra\" name=\"submit\">\n");

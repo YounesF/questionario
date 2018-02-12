@@ -11,7 +11,7 @@
         <form action="dati.jsp" method="post"> 
             <input placeholder="nome" type="text" name="nome"> <br>
             <input placeholder="cognome" type="text" name="cognome"> <br>
-            <input placeholder="cellulare" type="number" name="cellulare"> <br>
+            <input placeholder="cellulare" type="text" name="cellulare"> <br>
             <input placeholder="password" type="password" name="password"> almeno 6 caratteri alfanumerici <br>
             <input placeholder="email" type="text" name="email"> <br>
             <input type="date" id="nascita" name="nascita" min="1900-01-01">

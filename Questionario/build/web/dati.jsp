@@ -15,6 +15,7 @@
               String nome, cognome, email, password, dataString;
               int cellulare;
               Date date;
+              EmailSessionBean emailSender = new EmailSessionBean();
               
               nome = request.getParameter("nome");
               cognome = request.getParameter("cognome");
@@ -41,9 +42,9 @@
                 response.sendRedirect("registra.jsp"); 
             }*/
             
-            UtenteDAO.insertUtente(utente);
+            //UtenteDAO.insertUtente(utente);
             out.write(utente.toString());
-            
+            emailSender.sendEmail(utente.getEmail(), "Verifica email", "codice di accesso");
             
                       
            %> 
