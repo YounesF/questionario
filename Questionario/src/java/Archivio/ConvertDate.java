@@ -15,6 +15,7 @@ import java.text.SimpleDateFormat;
  */
 public class ConvertDate {
   
+    //converte una data in stringa
     public static String convertDateToString(int giorno, int mese, int anno){
         String s = new String();
         s="";

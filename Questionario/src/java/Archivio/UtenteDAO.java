@@ -21,6 +21,7 @@ public class UtenteDAO {
     static Connection conn;
     static PreparedStatement pst;
     
+    //Inserisce l'utente nel database
     public static void insertUtente(Utente u){
         
         try{
