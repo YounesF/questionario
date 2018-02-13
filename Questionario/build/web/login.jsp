@@ -1,4 +1,8 @@
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="Archivio.PostgreSQLJDBC"%>
 <%@page import="Archivio.Utente"%>
 <%@page import="Archivio.Archivio"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,46 +14,34 @@
         <title>Login</title>
     </head>
     <body>
-        
-        
         <% 
-            String username="", password="";
+            
+            String email=request.getParameter("email"), password=request.getParameter("password");
+            if(email == null || password == null){
+                response.sendRedirect("index.jsp"); 
+            }    
             session.setMaxInactiveInterval(18000);
-            
+            Connection c = PostgreSQLJDBC.getConn();
             Utente p = new Utente();
-
-            Archivio archivio = (Archivio)application.getAttribute("archivio");
+            Statement statement= c.createStatement();
+            ResultSet resultSet = null;
+            String sql = "SELECT * FROM utente WHERE email =" + email;
+            resultSet = statement.executeQuery(sql);
             
-            if(archivio == null){
-                archivio = new Archivio();
-                application.setAttribute("archivio",archivio);
-            }
-            if(request.getParameter("userID") !=null && request.getParameter("password") !=null){
-                username=request.getParameter("userID");
-                password=request.getParameter("password");
-                session.setAttribute("userID", username);
-                session.setAttribute("password", password);
-                p = new Utente("","",request.getParameter("userID"),request.getParameter("password"),"");
-                session.setAttribute("persona", p);
-
-            }
-            
-            if(archivio.isUtente((Utente) session.getAttribute("persona"))){      
-                session.setAttribute(username,"userID");
+            if(resultSet != null && resultSet.getString("password").equals(password))
+            {
+                session.setAttribute(email,"email");
                 session.setAttribute(password,"password");
-                out.write("login effettuato");
-                %>
-                
-             <input class="button" type="button" value="Torna a Login" onclick="window.location.href='index.jsp'">
-             
-                <%
             }
-            else if(username==null && password==null ){
-                response.sendRedirect("index.jsp");
-            } 
             else
                 response.sendRedirect("index.jsp"); 
+            
+            if (session.getAttribute("Username") == null || session.getAttribute("Username").equals(""))
+                response.sendRedirect("index.jsp"); 
+
         %>
+        
+        
 
        
         

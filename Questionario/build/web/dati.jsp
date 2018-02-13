@@ -42,7 +42,7 @@
                 response.sendRedirect("registra.jsp"); 
             }*/
             
-            //UtenteDAO.insertUtente(utente);
+            UtenteDAO.insertUtente(utente);
             out.write(utente.toString());
             emailSender.sendEmail(utente.getEmail(), "Verifica email", "codice di accesso");
             
