@@ -7,7 +7,7 @@
     </head>
     <body>
         <form action="login.jsp" method="post"><br/>
-            <input placeholder="userID" type="text" name="userID"><br>
+            <input placeholder="email" type="text" name="email"><br>
             <input placeholder="password" type="password" name="password"><br>
         <input class="button" type="submit" value="Entra" name="submit">
         <input class="button" type="button" value="Registrati" onclick="window.location.href='registra.jsp'">
