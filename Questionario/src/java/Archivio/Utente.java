@@ -19,6 +19,8 @@ public class Utente implements Serializable {
     private String email;
     private String password;
     private Date data;
+    private boolean valid;
+    
 
     public Utente(String nome, String cognome, int cellulare, String email, String password, Date data) {
         this.nome = nome;
@@ -80,6 +82,16 @@ public class Utente implements Serializable {
     public void setData(Date data) {
         this.data = data;
     }
+    
+       public boolean isValid() {
+         return valid;
+	}
+
+      public void setValid(boolean newValid) {
+         valid = newValid;
+	}	
+    
+ 
 
     @Override
     public String toString() {
