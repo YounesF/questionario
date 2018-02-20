@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import Archivio.*;
 
 public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -49,13 +50,14 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <form action=\"login.jsp\" method=\"post\"><br/>\n");
-      out.write("            <input placeholder=\"userID\" type=\"text\" name=\"userID\"><br>\n");
+      out.write("        <form action=\"LoginServlet\"><br/>\n");
+      out.write("            <input placeholder=\"email\" type=\"text\" name=\"email\"><br>\n");
       out.write("            <input placeholder=\"password\" type=\"password\" name=\"password\"><br>\n");
-      out.write("        <input class=\"button\" type=\"submit\" value=\"Entra\" name=\"submit\">\n");
+      out.write("        <input class=\"button\" type=\"submit\" value=\"submit\">\n");
+      out.write("        </form>\n");
       out.write("        <input class=\"button\" type=\"button\" value=\"Registrati\" onclick=\"window.location.href='registra.jsp'\">\n");
       out.write("        \n");
-      out.write("        </form>\n");
+      out.write("        \n");
       out.write("        \n");
       out.write("    </body>\n");
       out.write("</html>\n");
