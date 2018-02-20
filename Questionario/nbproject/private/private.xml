@@ -5,14 +5,21 @@
         <group>
             <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/web/login.jsp</file>
             <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/UtenteDAO.java</file>
+            <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/Persona.java</file>
+            <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/PostgreSQLJDBC.java</file>
+            <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/LoginDAO.java</file>
+            <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/EmailServlet.java</file>
+            <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/Protocol.java</file>
+            <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/LoginServlet.java</file>
             <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/web/index.jsp</file>
             <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/Utente.java</file>
+            <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/web/userLogged.jsp</file>
             <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/ConvertDate.java</file>
-            <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/Data.java</file>
-            <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/PostgreSQLJDBC.java</file>
+            <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/EmailSessionBean.java</file>
             <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/web/dati.jsp</file>
-            <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/Archivio.java</file>
+            <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/ConvertString.java</file>
             <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/web/registra.jsp</file>
+            <file>file:/C:/Users/youne/Documents/NetBeansProjects/Questionario/src/java/Archivio/Archivio.java</file>
         </group>
     </open-files>
 </project-private>
