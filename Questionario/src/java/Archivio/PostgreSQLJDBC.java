@@ -8,7 +8,7 @@ public class PostgreSQLJDBC {
       Connection c = null;
       try {
          Class.forName("org.postgresql.Driver");
-         c = DriverManager.getConnection("jdbc:postgresql://dumbo.db.elephantsql.com:5432/iovbwnfi", "iovbwnfi", "5nodVLhOz0f_vqPZgzOh1_AAYmmssPq3");
+         c = DriverManager.getConnection("jdbc:postgresql://bcvok3nhsz0o9cs-postgresql.services.clever-cloud.com:5432/bcvok3nhsz0o9cs", "ux6voecdslgozt45qrrm", "xtCYXt2BO78tq0xgqXcf");
       } catch (Exception e) {
          e.printStackTrace();
          System.err.println(e.getClass().getName()+": "+e.getMessage());
