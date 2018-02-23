@@ -8,7 +8,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="dati.jsp" method="post"> 
+        <form action="RegistraServlet"> 
             <input placeholder="nome" type="text" name="nome"> <br>
             <input placeholder="cognome" type="text" name="cognome"> <br>
             <input placeholder="cellulare" type="text" name="cellulare"> <br>
