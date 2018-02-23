@@ -56,10 +56,16 @@ import java.text.*;
          {
             String firstName = rs.getString("nome");
             String lastName = rs.getString("cognome");
+            int cellulare = rs.getInt("cellulare");
+            java.util.Date nascita = rs.getDate("data_nascita");
+            
 	     	
             System.out.println("Welcome " + firstName);
             bean.setNome(firstName);
             bean.setCognome(lastName);
+            bean.setCellulare(cellulare);
+            bean.setData(nascita);
+            
             bean.setValid(true);
          }
       } 
