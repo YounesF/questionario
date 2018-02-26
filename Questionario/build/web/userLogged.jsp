@@ -16,13 +16,19 @@
 	
       <body>
 
-            <% Utente currentUser = (Utente) (session.getAttribute("currentSessionUser")); 
-            
-                if(!currentUser.isValid())
-                    response.sendRedirect("index.jsp");
+            <% 
+               try{
+                session.getAttribute("currentSessionUser").toString();
+               }
+               catch(NullPointerException e){
+                   response.sendRedirect("index.jsp");
+               }
+                
+                Utente currentUser = (Utente) (session.getAttribute("currentSessionUser")); 
+                
+               
             %>
 			
-            Welcome <%= currentUser.getNome() + " " + currentUser.getCognome() %>
      
 
       </body>
