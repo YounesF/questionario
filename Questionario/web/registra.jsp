@@ -14,7 +14,7 @@
         
     </head>
     <body>
-        <form id="checkemailform">
+        <form action="RegistraServlet" id="checkemailform">
             
             <input placeholder="nome" type="text" name="nome"> <br>
             <input placeholder="cognome" type="text" name="cognome"> <br>
@@ -23,16 +23,11 @@
             <label for="field">Required, email: </label>
             <input placeholder="email" id="email" name="email"> <br>
             <input type="date" id="nascita" name="nascita" min="1900-01-01">
-
+            <input class="button" type="submit" value="submit">
+        </form>
             <br>
-            <input class="button" type="button" value="RegistraServlet" onclick="window.location.href='RegistraServlet.java'">
             <input class="button" type="button" value="Torna Login" onclick="window.location.href='index.jsp'">
-            <script>
-            // just for the demos, avoids form submit
-            jQuery.validator.setDefaults({
-                debug: true,
-                success: "valid"
-              });
+           <script>
               $( "#checkemailform" ).validate({
                 rules: {
                   email: {
@@ -41,6 +36,6 @@
                   }
                 }
               });
-        </script>
-    </body>
+        </script> 
+    </body> 
 </html>
