@@ -31,15 +31,13 @@ try
      quest.setDomanda(request.getParameter("domanda"));
      
      int i = 1;
-     while(!request.getParameter("r"+i).equals(null)){
+     while(request.getParameter("r"+i) != null){
          quest.getRisposte().add(request.getParameter("r"+i));
          i++;
-         System.out.println("prova");
      }
   
-      //UtenteDAO.insertUtente(user);
-	   		    
-    // response.sendRedirect("userRegistrato.jsp");
+      QuestionarioDAO.insertQuestionario(quest);
+      response.sendRedirect("questionarioRegistrato.jsp");
 } 
 		
 		
