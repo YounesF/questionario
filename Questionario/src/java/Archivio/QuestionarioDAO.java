@@ -19,9 +19,8 @@ public class QuestionarioDAO {
         
         try{
             conn = PostgreSQLJDBC.getConn();
-            pst = conn.prepareStatement("INSERT INTO domanda VALUES (?)");
+            pst = conn.prepareStatement("INSERT INTO domanda (testodomanda) VALUES (?)");
             pst.setString(1, q.getDomanda());
-            //mettere la get di domanda e sotto for con insert in risposte e for
             pst.executeUpdate();
             conn.close();   
         }
