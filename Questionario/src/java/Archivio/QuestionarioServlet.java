@@ -29,15 +29,21 @@ try
     
      Questionario quest = new Questionario();
      quest.setDomanda(request.getParameter("domanda"));
-     
+     System.out.println("prova");
      int i = 1;
      while(request.getParameter("r"+i) != null){
-         quest.getRisposte().add(request.getParameter("r"+i));
+         System.out.println("prova2");
+         try{
+            quest.getRisposte().add(request.getParameter("r"+i));
+         }
+         catch(NullPointerException e){
+            System.out.println("prova3");
+         }
          i++;
      }
-  
-      QuestionarioDAO.insertQuestionario(quest);
-      response.sendRedirect("questionarioRegistrato.jsp");
+     System.out.println(quest.toString());
+     QuestionarioDAO.insertQuestionario(quest);
+     //response.sendRedirect("questionarioRegistrato.jsp");
 } 
 		
 		

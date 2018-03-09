@@ -16,6 +16,12 @@ public class Questionario {
     private String domanda;
     private ArrayList<String> risposte;
 
+    public Questionario() {
+        risposte = new ArrayList<String>();
+    }
+    
+    
+
     public String getDomanda() {
         return domanda;
     }
