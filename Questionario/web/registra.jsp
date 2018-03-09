@@ -1,6 +1,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<%@ taglib uri="WEB-INF/tlds/customTag.tld" prefix="ss"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,7 +23,10 @@
             <input placeholder="password" type="password" name="password"> almeno 6 caratteri alfanumerici <br>
             <label for="field">Required, email: </label>
             <input placeholder="email" id="email" name="email"> <br>
-            <input type="date" id="nascita" name="nascita" min="1900-01-01">
+            <input type="date" id="nascita" name="nascita" min="1900-01-01"><br>
+            
+            <ss:Registra/> <br>
+            
             <input class="button" type="submit" value="submit">
         </form>
             <br>
