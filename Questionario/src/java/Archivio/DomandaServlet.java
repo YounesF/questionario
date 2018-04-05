@@ -12,7 +12,6 @@ import javax.servlet.http.HttpSession;
  */
 public class DomandaServlet extends HttpServlet {
 
-
     public void doGet(HttpServletRequest request, HttpServletResponse response) 
 			           throws ServletException, java.io.IOException {
 
@@ -30,6 +29,7 @@ public class DomandaServlet extends HttpServlet {
                 i++;
             }
 
+            
             System.out.println(d.toString());
             DomandaDAO.insertDomanda(d);
             //response.sendRedirect("questionarioRegistrato.jsp");

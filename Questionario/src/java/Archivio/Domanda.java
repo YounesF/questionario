@@ -6,6 +6,7 @@ public class Domanda {
     
     private String domanda;
     private ArrayList<String> risposte;
+    private int id_questionario;
 
     public Domanda() {
         risposte = new ArrayList<String>();
@@ -27,11 +28,17 @@ public class Domanda {
         this.risposte = risposte;
     }
 
-    @Override
-    public String toString() {
-        return "Domanda{" + "domanda=" + domanda + ", risposte=" + risposte + '}';
+    public int getId_questionario() {
+        return id_questionario;
     }
 
+    public void setId_questionario(int id_questionario) {
+        this.id_questionario = id_questionario;
+    }
 
+    @Override
+    public String toString() {
+        return "Domanda{" + "domanda=" + domanda + ", risposte=" + risposte + ", id_questionario=" + id_questionario + '}';
+    }
     
 }
