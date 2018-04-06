@@ -14,8 +14,6 @@ and open the template in the editor.
     <body>
         <div id="creaDomanda" >
             <form action="DomandaServlet">
-                Numero domande: <input type="number" name="numeroDomande"> <br>
-                Numero totale di questionari: <input type="number" name="numeroQuest"> <br>
                 <span> Domanda numero <span id="numeroDomanda">1</span>:</span><input type="button" id="creaDomandaAperta" value="crea una domanda aperta"><br>
                 <input type="text" name="domanda" id="testoDomanda" placeholder="Testo Domanda"><br>
                 <div id="risposta1"><input type="text" name="r1"></div>
