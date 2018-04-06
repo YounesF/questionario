@@ -1,0 +1,1 @@
+ALTER SEQUENCE risposta_idrisposta_seq RESTART with 1;
