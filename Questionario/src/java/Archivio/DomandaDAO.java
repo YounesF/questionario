@@ -16,7 +16,7 @@ public class DomandaDAO {
             conn = PostgreSQLJDBC.getConn();
             pst = conn.prepareStatement("INSERT INTO domanda (testodomanda, id_questionario) VALUES (?, ?)",Statement.RETURN_GENERATED_KEYS);
             pst.setString(1, d.getDomanda());
-            pst.setInt(2, 2);
+            pst.setInt(2, d.getId_questionario());
             pst.executeUpdate();
             
             //Prende ultimo id di domanda

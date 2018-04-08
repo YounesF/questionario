@@ -16,7 +16,8 @@ public class DomandaServlet extends HttpServlet {
 			           throws ServletException, java.io.IOException {
 
         try{	    
-
+            HttpSession session = request.getSession(true);
+            Questionario currentQuest = (Questionario) (session.getAttribute("Questionario"));
             Domanda d = new Domanda();
             d.setDomanda(request.getParameter("domanda"));
             int i = 1;
@@ -31,8 +32,10 @@ public class DomandaServlet extends HttpServlet {
 
             
             System.out.println(d.toString());
+            d.setId_questionario(currentQuest.getId());
             DomandaDAO.insertDomanda(d);
-            //response.sendRedirect("questionarioRegistrato.jsp");
+            currentQuest.DomandaInserita();
+            response.sendRedirect("creazioneDomanda.jsp");
         } 
 
         catch (Throwable theException){

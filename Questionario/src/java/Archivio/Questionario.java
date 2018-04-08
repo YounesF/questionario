@@ -7,17 +7,48 @@ package Archivio;
  */
 public class Questionario {
 
-    private int numeroQuest;
+    private String nome;
     private int numeroDomande;
     private double costo;
+    private String email;
+    private int id;
 
-    public int getNumeroQuest() {
-        return numeroQuest;
+    public int getId() {
+        return id;
     }
-    public void setNumeroQuest(int numeroQuest) {
-         this.numeroQuest = numeroQuest;
+
+    public void setId(int id) {
+        this.id = id;
     }
     
+    public Questionario() {
+    }
+
+    @Override
+    public String toString() {
+        return "Questionario{" + "nome=" + nome + ", numeroDomande=" + numeroDomande + ", costo=" + costo + ", email=" + email + ", id=" + id + '}';
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void DomandaInserita(){
+        this.numeroDomande = this.numeroDomande - 1;
+    }
+    
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public int getNumeroDomande() {
         return numeroDomande;
     }
@@ -46,9 +77,7 @@ public class Questionario {
         setCosto(costo);
     }
 
-    @Override
-    public String toString() {
-        return "Questionario{" + "numeroQuest=" + numeroQuest + ", numeroDomande=" + numeroDomande + ", costo=" + costo + '}';
-    }
+
+
    
 }

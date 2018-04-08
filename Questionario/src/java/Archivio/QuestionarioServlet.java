@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -22,13 +23,20 @@ public class QuestionarioServlet  extends HttpServlet {
         try{	    
 
             Questionario q = new Questionario();
+            HttpSession session = request.getSession(true);	    
+
             
             q.setNumeroDomande(Integer.parseInt(request.getParameter("numeroDomande")));
-            q.setNumeroQuest(Integer.parseInt(request.getParameter("numeroQuest")));
+            q.setNome(request.getParameter("nome"));
             q.calcolaCosto(Integer.parseInt(request.getParameter("numeroDomande")));
+            Utente currentUser = (Utente) (session.getAttribute("currentSessionUser")); 
+            System.out.println(currentUser.getEmail());
             System.out.println(q.toString());
-            QuestionarioDAO.insertQuestionario(q);
-            //response.sendRedirect("questionarioRegistrato.jsp");
+            q.setEmail(currentUser.getEmail());
+            int id = QuestionarioDAO.insertQuestionario(q);
+            q.setId(id);
+            session.setAttribute("Questionario", q);
+            response.sendRedirect("creazioneDomanda.jsp");
         } 
 
         catch (Throwable theException){
