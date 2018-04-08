@@ -1,7 +1,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<%@ taglib uri="WEB-INF/tlds/customTag.tld" prefix="ss"%>
 <!DOCTYPE html>
 <html>
     <head>

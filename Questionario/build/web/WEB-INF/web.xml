@@ -9,6 +9,10 @@
         <servlet-class>Archivio.RegistraServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>DomandaServlet</servlet-name>
+        <servlet-class>Archivio.DomandaServlet</servlet-class>
+    </servlet>
+     <servlet>
         <servlet-name>QuestionarioServlet</servlet-name>
         <servlet-class>Archivio.QuestionarioServlet</servlet-class>
     </servlet>
@@ -20,6 +24,10 @@
     <servlet-mapping>
         <servlet-name>RegistraServlet</servlet-name>
         <url-pattern>/RegistraServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DomandaServlet</servlet-name>
+        <url-pattern>/DomandaServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>QuestionarioServlet</servlet-name>
