@@ -24,7 +24,7 @@ public class QuestionarioServlet  extends HttpServlet {
 
             Questionario q = new Questionario();
             HttpSession session = request.getSession(true);	    
-
+            int contatore = 1;
             
             q.setNumeroDomande(Integer.parseInt(request.getParameter("numeroDomande")));
             q.setNome(request.getParameter("nome"));
@@ -36,6 +36,7 @@ public class QuestionarioServlet  extends HttpServlet {
             int id = QuestionarioDAO.insertQuestionario(q);
             q.setId(id);
             session.setAttribute("Questionario", q);
+            session.setAttribute("contatore", contatore);
             response.sendRedirect("creazioneDomanda.jsp");
         } 
 

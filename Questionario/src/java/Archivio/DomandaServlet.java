@@ -30,6 +30,8 @@ public class DomandaServlet extends HttpServlet {
                 i++;
             }
 
+            int cont = (Integer)session.getAttribute("contatore");
+            session.setAttribute("contatore", cont+1);
             
             System.out.println(d.toString());
             d.setId_questionario(currentQuest.getId());
