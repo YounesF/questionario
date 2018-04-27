@@ -30,7 +30,7 @@ and open the template in the editor.
             }
         %>
         <div id="creaDomanda" >
-            <form action="DomandaServlet">
+            <form id="formDomanda" action="DomandaServlet">
                 <span> Domanda numero <span id="numeroDomanda"> <% out.write(Integer.toString((Integer) session.getAttribute("contatore")));%> </span>:</span><input type="button" id="creaDomandaAperta" value="crea una domanda aperta"><br>
                 <input type="text" name="domanda" id="testoDomanda" placeholder="Testo Domanda"><br>
                 <div id="risposta1"><input type="text" name="r1"></div>
@@ -38,6 +38,7 @@ and open the template in the editor.
                 <div id="risposta3"><input type="text" name="r3"></div>
                 <div id="risposta4"><input type="text" name="r4"></div>
                 <input type="button" id="aggiungiRisposta" value="aggiungi risposta"><br>
+                <input type="checkbox" id="checkbox" name="multipla" value="multipla">
                 <input type="submit" class="submit">
                 <div id="limiteRisposte"></div>
             </form>
@@ -77,21 +78,25 @@ and open the template in the editor.
             });
             //cambia da domanda chiusa a domanda aperta
             $('form').on('click', '#creaDomandaAperta', function () {
-                $('form').html('<span> Domanda numero <span id="numeroDomanda">  <% out.write(Integer.toString((Integer) session.getAttribute("contatore")));%> </span>:</span><input type="button" id="creaDomandaChiusa" value="crea una domanda chiusa"><br><input type="text" id="testoDomanda" placeholder="Testo Domanda"><br>\n\
+                $('#formDomanda').attr('action', 'DomandaApertaServlet');
+                $('form').html('<span> Domanda numero <span id="numeroDomanda">  <% out.write(Integer.toString((Integer) session.getAttribute("contatore")));%> </span>:</span><input type="button" id="creaDomandaChiusa" value="crea una domanda chiusa"><br><input type="text" id="testoDomanda" name="domanda" placeholder="Testo Domanda"><br>\n\
                 <input type="submit" class="submit">');
                 $('#aggiungiRisposta').remove();
                 num = 4;
+                
             });
 
             //cambia da domanda aperta a domanda a risposta multipla
             $('form').on('click', '#creaDomandaChiusa', function () {
+                $('#formDomanda').attr('action', 'DomandaServlet');
                 $('form').html('<span> Domanda numero <span id="numeroDomanda">  <% out.write(Integer.toString((Integer) session.getAttribute("contatore")));%> </span>:</span><input type="button" id="creaDomandaAperta" value="crea una domanda aperta"><br>\n\
-                <input type="text" id="testoDomanda" placeholder="Testo Domanda"><br>\n\
-                <div id="risposta1"><input type="text"></div>\n\
-                <div id="risposta2"><input type="text"></div>\n\
-                <div id="risposta3"><input type="text"></div>\n\
-                <div id="risposta4"><input type="text"></div>\n\
+                <input type="text" id="testoDomanda" name="domanda" placeholder="Testo Domanda"><br>\n\
+                <div id="risposta1"><input type="text" name="r1"></div>\n\
+                <div id="risposta2"><input type="text" name="r2"></div>\n\
+                <div id="risposta3"><input type="text" name="r3"></div>\n\
+                <div id="risposta4"><input type="text" name="r4"></div>\n\
                 <input type="button" id="aggiungiRisposta" value="aggiungi risposta"><br>\n\
+                <input type="checkbox" id="checkbox" name="multipla" value="multipla">\n\
                 <input type="submit" class="submit">\n\
                 <div id="limiteRisposte"></div>');
                 //aggiunge una casella di risposta al aclick di #aggiungiRisposta
