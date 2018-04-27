@@ -5,6 +5,10 @@
         <servlet-class>Archivio.LoginServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>DomandaApertaServlet</servlet-name>
+        <servlet-class>Archivio.DomandaApertaServlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>RegistraServlet</servlet-name>
         <servlet-class>Archivio.RegistraServlet</servlet-class>
     </servlet>
@@ -32,6 +36,10 @@
     <servlet-mapping>
         <servlet-name>QuestionarioServlet</servlet-name>
         <url-pattern>/QuestionarioServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DomandaApertaServlet</servlet-name>
+        <url-pattern>/DomandaApertaServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
