@@ -14,9 +14,11 @@ public class DomandaDAO {
         
         try{    
             conn = PostgreSQLJDBC.getConn();
-            pst = conn.prepareStatement("INSERT INTO domanda (testodomanda, id_questionario) VALUES (?, ?)",Statement.RETURN_GENERATED_KEYS);
+            pst = conn.prepareStatement("INSERT INTO domanda (testodomanda, id_questionario, aperta, multipla) VALUES (?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
             pst.setString(1, d.getDomanda());
             pst.setInt(2, d.getId_questionario());
+            pst.setBoolean(3, false);
+            pst.setBoolean(4, d.isMultipla());
             pst.executeUpdate();
             
             //Prende ultimo id di domanda
@@ -38,5 +40,29 @@ public class DomandaDAO {
         catch(Exception e){
             System.out.println(e);
         }
+    }
+
+    public static void insertDomandaAperta(Domanda d) {
+       try{    
+            conn = PostgreSQLJDBC.getConn();
+            pst = conn.prepareStatement("INSERT INTO domanda (testodomanda, id_questionario, aperta, multipla) VALUES (?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
+            pst.setString(1, d.getDomanda());
+            pst.setInt(2, d.getId_questionario());
+            pst.setBoolean(3, true);
+            pst.setBoolean(4, d.isMultipla());
+            pst.executeUpdate();
+            
+            //Prende ultimo id di domanda
+            String query = "SELECT iddomanda FROM domanda ORDER BY iddomanda DESC LIMIT 1"; 
+            st = conn.createStatement();
+            rs = st.executeQuery(query);
+            rs.next();
+            int id = rs.getInt(1);
+            
+            conn.close();   
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }   
     }
 }

@@ -7,6 +7,7 @@ public class Domanda {
     private String domanda;
     private ArrayList<String> risposte;
     private int id_questionario;
+    private boolean multipla;
 
     public Domanda() {
         risposte = new ArrayList<String>();
@@ -36,9 +37,21 @@ public class Domanda {
         this.id_questionario = id_questionario;
     }
 
+    public boolean isMultipla() {
+        return multipla;
+    }
+
+   
+
+    public void setMultipla(boolean multipla) {
+        this.multipla = multipla;
+    }
+
     @Override
     public String toString() {
-        return "Domanda{" + "domanda=" + domanda + ", risposte=" + risposte + ", id_questionario=" + id_questionario + '}';
+        return "Domanda{" + "domanda=" + domanda + ", risposte=" + risposte + ", id_questionario=" + id_questionario + ", multipla=" + multipla + '}';
     }
+
+   
     
 }
