@@ -8,6 +8,7 @@ public class Domanda {
     private ArrayList<String> risposte;
     private int id_questionario;
     private boolean multipla;
+    
 
     public Domanda() {
         risposte = new ArrayList<String>();
