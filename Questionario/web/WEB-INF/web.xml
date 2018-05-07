@@ -5,6 +5,10 @@
         <servlet-class>Archivio.LoginServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>VisualizzaServlet</servlet-name>
+        <servlet-class>Archivio.VisualizzaServlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>DomandaApertaServlet</servlet-name>
         <servlet-class>Archivio.DomandaApertaServlet</servlet-class>
     </servlet>
@@ -24,6 +28,10 @@
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VisualizzaServlet</servlet-name>
+        <url-pattern>/VisualizzaServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RegistraServlet</servlet-name>

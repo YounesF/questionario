@@ -6,10 +6,8 @@
         <title>Questionario</title>
     </head>
     <body>
-        <div id="creaQuestionario" >
-            <form action="QuestionarioServlet">
-                Nome : <input type="text" name="nome"> <br>
-                Numero domande: <input type="number" name="numeroDomande"> <br>
+        <div id="VisualizzaServlet" >
+            <form action="VisualizzaServlet">
                 <input type="submit" value="Invia" class="submit">
             </form>    
         </div>
