@@ -1,6 +1,7 @@
 <%@page import="Archivio.Questionario"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
+<%@ include file = "mandaALogin.jsp" %>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -13,22 +14,23 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
-        <%
-
-            try {
+        <% /*
+            try{
                 session.getAttribute("Questionario").toString();
 
-            } catch (NullPointerException e) {
+            } 
+            catch(NullPointerException e){
                 response.sendRedirect("creazioneQuestionario.jsp");
             }
 
-            Questionario currentQuest = (Questionario) (session.getAttribute("Questionario"));
+            Questionario currentQuest = (Questionario)(session.getAttribute("Questionario"));
+            
             int numeroMaxDomande = currentQuest.getNumeroDomande();
 
-            if (currentQuest.getNumeroDomande() == 0) {
+            if(currentQuest.getNumeroDomande() == 0){
                 response.sendRedirect("userLogged.jsp");
             }
-        %>
+        */ %>
         <div id="creaDomanda" >
             <form id="formDomanda" action="DomandaServlet">
                 <span> Domanda numero <span id="numeroDomanda"> <% out.write(Integer.toString((Integer) session.getAttribute("contatore")));%> </span>:</span><input type="button" id="creaDomandaAperta" value="crea una domanda aperta"><br>
