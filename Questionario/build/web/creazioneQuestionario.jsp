@@ -10,7 +10,7 @@
             <form action="QuestionarioServlet">
                 Nome : <input type="text" name="nome"> <br>
                 Numero domande: <input type="number" name="numeroDomande"> <br>
-                <input type="submit" value="submit" class="submit">
+                <input type="submit" value="Invia" class="submit">
             </form>    
         </div>
     </body>
