@@ -30,7 +30,7 @@ public class VisualizzaDAO {
             
             for(int i = 0; i <= numerodomande; i++){
                 try{
-                    System.out.println("prova3"); 
+                     
                     iddomanda = rs.getInt("iddomanda");
                     iddomanda=iddomandaNew;
                     Domanda d = new Domanda();
@@ -43,7 +43,7 @@ public class VisualizzaDAO {
                     while(iddomanda == iddomandaNew ){
                         if(!rs.getBoolean("aperta")){ 
                             d.getRisposte().add((rs.getString("testorisposta")));
-                            System.out.println("prova");
+                            
                         }
                         if(rs.next())
                          iddomandaNew= rs.getInt("iddomanda");
