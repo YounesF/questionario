@@ -18,9 +18,8 @@ public class VisualizzaServlet extends HttpServlet {
 
         try{	    
             HttpSession session = request.getSession(true);
-            Questionario currentQuest = (Questionario) (session.getAttribute("Questionario"));
             ArrayList<Domanda> questionarioVisual = new ArrayList<Domanda>();
-            VisualizzaDAO.insertDomanda(currentQuest,questionarioVisual);
+            VisualizzaDAO.insertDomanda(Integer.parseInt(request.getParameter("idquestionario")),questionarioVisual);
             
         }
 

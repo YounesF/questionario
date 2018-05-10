@@ -5,9 +5,11 @@ import java.util.ArrayList;
 public class Domanda {
     
     private String domanda;
+    private int idDomanda;
     private ArrayList<String> risposte;
     private int id_questionario;
     private boolean multipla;
+    private boolean aperta;
     
 
     public Domanda() {
@@ -26,6 +28,25 @@ public class Domanda {
         return risposte;
     }
 
+    public int getIdDomanda() {
+        return idDomanda;
+    }
+
+    public void setIdDomanda(int idDomanda) {
+        this.idDomanda = idDomanda;
+    }
+
+    public boolean isAperta() {
+        return aperta;
+    }
+
+    public void setAperta(boolean aperta) {
+        this.aperta = aperta;
+    }
+    
+    
+    
+    
     public void setRisposte(ArrayList<String> risposte) {
         this.risposte = risposte;
     }
@@ -50,9 +71,9 @@ public class Domanda {
 
     @Override
     public String toString() {
-        return "Domanda{" + "domanda=" + domanda + ", risposte=" + risposte + ", id_questionario=" + id_questionario + ", multipla=" + multipla + '}';
+        return "Domanda{" + "domanda=" + domanda + ", idDomanda=" + idDomanda + ", risposte=" + risposte + ", id_questionario=" + id_questionario + ", multipla=" + multipla + ", aperta=" + aperta + '}';
     }
 
-   
+
     
 }
