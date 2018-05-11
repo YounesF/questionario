@@ -43,7 +43,7 @@ try
      }
 	        
      else 
-          response.sendRedirect("index.jsp"); //error page 
+          response.sendRedirect("login.jsp"); //error page 
 } 
 		
 		
