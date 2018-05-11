@@ -21,7 +21,7 @@
                 session.getAttribute("currentSessionUser").toString();
                }
                catch(NullPointerException e){
-                   response.sendRedirect("index.jsp");
+                   response.sendRedirect("login.jsp");
                }
                 
                 Utente currentUser = (Utente) (session.getAttribute("currentSessionUser")); 
