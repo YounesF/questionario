@@ -26,6 +26,10 @@ public class DomandaServlet extends HttpServlet {
             if(cont == 1){
                 session.setAttribute("domande", domande);
             }
+            else{
+                domande = (ArrayList<Domanda>) (session.getAttribute("domande"));
+            }
+            
             Domanda d = new Domanda();
             d.setDomanda(request.getParameter("domanda"));
             int i = 1;
@@ -53,13 +57,15 @@ public class DomandaServlet extends HttpServlet {
             session.setAttribute("contatore", cont+1);
             d.setId_questionario(currentQuest.getId());
             //sistemare
-            /*
-            if(session.getAttribute("contatore").equals(currentQuest.getNumeroDomande())){
+           
+            if(currentQuest.getNumeroDomande()==1){
                 DomandaDAO.insertDomanda(domande);
+                response.sendRedirect("userRegistrato.jsp");
+            }
+            else{
                 currentQuest.DomandaInserita();
                 response.sendRedirect("creazioneDomanda.jsp");
-            }*/
-            
+            }
             
             System.out.println(d);
         } 

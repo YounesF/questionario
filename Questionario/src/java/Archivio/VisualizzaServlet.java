@@ -20,6 +20,8 @@ public class VisualizzaServlet extends HttpServlet {
             HttpSession session = request.getSession(true);
             ArrayList<Domanda> questionarioVisual = new ArrayList<Domanda>();
             VisualizzaDAO.insertDomanda(Integer.parseInt(request.getParameter("idquestionario")),questionarioVisual);
+            session.setAttribute("questionarioVisual",questionarioVisual);
+            //response.sendRedirect("formQuestionario.jsp");
             
         }
 

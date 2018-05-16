@@ -28,15 +28,15 @@ public class VisualizzaDAO {
             int numerodomande = rs.getInt("numerodomande");
             
             
-            for(int i = 0; i <= numerodomande; i++){
+            for(int i = 0; i <= numerodomande+1; i++){
                 try{
                      
                     iddomanda = rs.getInt("iddomanda");
-                    iddomanda=iddomandaNew;
+                    iddomandaNew = iddomanda;
                     Domanda d = new Domanda();
                     d.setDomanda(rs.getString("testodomanda"));
                     d.setAperta(rs.getBoolean("aperta"));
-                    d.setMultipla(rs.getBoolean("aperta"));
+                    d.setMultipla(rs.getBoolean("multipla"));
                     d.setIdDomanda(rs.getInt("iddomanda"));
                     d.setId_questionario(rs.getInt("idquestionario"));
                                    
@@ -46,9 +46,9 @@ public class VisualizzaDAO {
                             
                         }
                         if(rs.next())
-                         iddomandaNew= rs.getInt("iddomanda");
+                         iddomandaNew = rs.getInt("iddomanda");
                         else
-                            iddomandaNew=0;
+                          iddomandaNew=0;
                     }
                     questionarioVisual.add(d);
                     System.out.println(d);

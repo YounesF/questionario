@@ -1,6 +1,7 @@
 package Archivio;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,26 +19,34 @@ public class DomandaApertaServlet extends HttpServlet {
         try{	    
             HttpSession session = request.getSession(true);
             Questionario currentQuest = (Questionario) (session.getAttribute("Questionario"));
+            ArrayList<Domanda> domande = new ArrayList<Domanda>();
+            int cont = (Integer)session.getAttribute("contatore");
+            
+            if(cont == 1){
+                session.setAttribute("domande", domande);
+            }
+            else{
+                domande = (ArrayList<Domanda>) (session.getAttribute("domande"));
+            }
+            
             Domanda d = new Domanda();
             d.setDomanda(request.getParameter("domanda"));
             int i = 1;
-
-            int cont = (Integer)session.getAttribute("contatore");
+            
+            d.setAperta(true);
+            d.setMultipla(false);
             session.setAttribute("contatore", cont+1);
             
-            try{
-            if(request.getParameter("multipla").equals("multipla")){
-                d.setMultipla(true);
-            }
-            else
-                d.setMultipla(false); }
-            catch(NullPointerException e){
-                
-                }
+            domande.add(d);
             
-            System.out.println(d.toString());
             d.setId_questionario(currentQuest.getId());
-            DomandaDAO.insertDomandaAperta(d);
+            System.out.println(d.toString());
+            
+            if(currentQuest.getNumeroDomande()==1){
+                DomandaDAO.insertDomanda(domande);
+                response.sendRedirect("userRegistrato.jsp");
+            }
+            
             currentQuest.DomandaInserita();
             response.sendRedirect("creazioneDomanda.jsp");
         } 
