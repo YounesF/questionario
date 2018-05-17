@@ -5,4 +5,3 @@ Progetto:
 -recupero credenziali
 -questionario statico per selezione utenti
 -inserire domande e risposte solo una volta finite le domande
--pagamento
