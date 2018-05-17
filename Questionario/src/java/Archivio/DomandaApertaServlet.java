@@ -44,7 +44,7 @@ public class DomandaApertaServlet extends HttpServlet {
             
             if(currentQuest.getNumeroDomande()==1){
                 DomandaDAO.insertDomanda(domande);
-                response.sendRedirect("userRegistrato.jsp");
+                response.sendRedirect("paypal.jsp");
             }
             
             currentQuest.DomandaInserita();
