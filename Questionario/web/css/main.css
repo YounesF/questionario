@@ -101,7 +101,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 textarea {
   outline: none;
-  border: none;
+  border: 2px solid #ccc;
 }
 
 textarea:focus, input:focus {
@@ -234,9 +234,9 @@ iframe {
 
 .login100-div-rememberpwd{
   width: 100%;
-  margin-top: -25px;
-  margin-bottom: -52px;
-  margin-left: 223px;
+  margin-top: -7px;
+  margin-bottom: -92px;
+  margin-left: 53px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -259,6 +259,13 @@ iframe {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 43px 88px 93px 190px;
+}
+
+.creazioneDomanda-form {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 51px 95px 102px 95px;
 }
 
 
@@ -285,8 +292,38 @@ iframe {
 
 }
 
+.wrapCreazioneDomande-input100 {
+  width: 100%;
+  position: relative;
+  
+  padding: 0px 8px 21px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.wrapCreazioneRisposte-input100 {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #b2b2b2;
+}
+
 /*---------------------------------------------*/
 .input100 {
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.2;
+  text-align: center;
+  display: block;
+  width: 100%;
+  background: transparent;
+  padding: 26px 5px 0px 0px;
+}
+
+.inputLogin {
   font-family: Poppins-Regular;
   font-size: 15px;
   color: #555555;
@@ -295,7 +332,7 @@ iframe {
   display: block;
   width: 100%;
   background: transparent;
-  padding: 0 5px;
+  padding: 12px 5px 12px 5px;
 }
 
 .focus-input100 {
@@ -413,15 +450,14 @@ input.input100 {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  min-width: 160px;
-  margin-top: -32px;
-  margin-left: 102px;
-  height: 50px;
+  min-width: 146px;
+  margin-top: -39px;
+  margin-left: 153px;
+  height: 30px;
   background-color: #57b846;
   border-radius: 25px;
-
   font-family: Poppins-Regular;
-  font-size: 16px;
+  font-size: 13px;
   color: #fff;
   line-height: 1.2;
 
@@ -429,6 +465,12 @@ input.input100 {
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;*/
+}
+
+@media only screen and (min-width : 150px) and (max-width : 780px) {
+  .login100-form-btn {
+    margin-left: 70px;
+  }
 }
 
 .login100-form-btn:hover {
@@ -462,15 +504,15 @@ input.input100 {
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    min-width: 160px;
-    margin-top: -13px;
-    margin-bottom: -21px;
-    margin-left: 61px;
-    height: 50px;
+    min-width: 146px;
+    margin-top: -5px;
+    margin-bottom: -30px;
+    margin-left: 86px;
+    height: 30px;
     background-color: #57b846;
     border-radius: 25px;
     font-family: Poppins-Regular;
-    font-size: 16px;
+    font-size: 13px;
     color: #fff;
     line-height: 1.2;
 }
@@ -478,6 +520,7 @@ input.input100 {
 .registra100-form-btn:hover {
   background-color: #088A29;
 }
+
 /*------------------------------------------------------------------
 [ Responsive ]*/
 
@@ -531,16 +574,16 @@ input.input100 {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  min-width: 160px;
+  min-width: 146px;
   margin-top: 37px;
   margin-bottom: -34px;
-  margin-left: 22.5%;
-  height: 50px;
+  margin-left: 24%;
+  height: 30px;
   background-color: #57b846;
   border-radius: 25px;
 
   font-family: Poppins-Regular;
-  font-size: 16px;
+  font-size: 13px;
   color: #fff;
   line-height: 1.2;
 }
@@ -551,7 +594,7 @@ input.input100 {
 
 .textTitolo {
   margin-top: 20px;
-  margin-left: 4px;
+  margin-left: 27px;
 }
 
 .textTitolo1 {
@@ -570,6 +613,93 @@ input.input100 {
   justify-content: space-between;
   padding: 43px 88px 93px 190px;
 }
+
+/*------------------------------------------------------------------
+[ Creazione Domanda ]*/
+
+.creazioneDomandaInvio-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 146px;
+    margin-top: 110px;
+    margin-bottom: -75px;
+    margin-left: 173px;
+    height: 30px;
+    background-color: #57b846;
+    border-radius: 25px;
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.creazioneDomandaInvio-form-btn:hover {
+  background-color: #088A29;
+}
+
+.creazioneDomanda-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 146px;
+    margin-top: -28px;
+    margin-bottom: -89px;
+    margin-left: 330px;
+    height: 30px;
+    background-color: #57b846;
+    border-radius: 25px;
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.creazioneDomanda-form-btn:hover {
+  background-color: #088A29;
+}
+
+.cambiaDomanda-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 146px;
+    margin-top: -27px;
+    margin-bottom: 1px;
+    margin-left: 266px;
+    height: 30px;
+    background-color: #57b846;
+    border-radius: 25px;
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.cambiaDomanda-form-btn:hover {
+  background-color: #088A29;
+}
+
+.elimina{
+    padding: 5px 11px;
+    background-color: #f44336;
+}
+
 /*------------------------------------------------------------------
 [ Alert validate ]*/
 
