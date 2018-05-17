@@ -58,7 +58,6 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 
 .SpiegaUtenze{
@@ -71,6 +70,13 @@ body{
     text-align: center;
     background-image: url("../images/backgroundhome.jpg");
 
+}
+
+@media only screen and (min-width : 150px) and (max-width : 780px) {
+  .spiegaUtenze{
+    padding-top: 30px;
+    height: 800px;
+  }
 }
 
 .SpiegaUtenze h1{
@@ -103,9 +109,22 @@ body{
     opacity: 1;
 }
 
+@media only screen and (min-width : 150px) and (max-width : 780px) {
+  .spiegaFree{
+    width: 290px;
+  }
+}
+
 .cellContainer {
   width: 50%;
   float: left;
+}
+
+@media only screen and (min-width : 150px) and (max-width : 780px) {
+  .cellContainer {
+    float: none;
+    width: 100%;
+  }
 }
 
 .SpiegaPremium{
@@ -119,6 +138,13 @@ body{
     display:inline-block;
     -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media only screen and (min-width : 150px) and (max-width : 780px) {
+  .spiegaPremium{
+    margin-top: 20px;
+    width: 290px;
+  }
 }
 
 .SpiegaFree:before {
