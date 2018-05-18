@@ -1,6 +1,7 @@
 Progetto:
 
--visualizzare questionario
+-servlet risposte utente
 -controlli questionario(creazione domanda), login utente
 -recupero credenziali
 -questionario statico per selezione utenti
+-cacciosegreto
