@@ -15,13 +15,16 @@
                 ArrayList<Domanda> questionarioVisual = (ArrayList<Domanda>) (session.getAttribute("questionarioVisual"));
                 for(Domanda d: questionarioVisual){
                     if(d.isAperta()){
-                        out.write(d.getDomanda()+"<br> <input type='text' name='"+d.getIdDomanda()+"'");
+                        out.write(d.getDomanda()+"<br> <input type='text' name='"+d.getIdDomanda()+"'><br>");
+                        out.write("<br>");
                     }
                     else if(d.isMultipla()){
                         out.write(d.getDomanda()+"<br>");
                         for(String r: d.getRisposte()){
                             out.write("<input type='checkbox' name='"+d.getIdDomanda()+"' value='"+r+"'>"+ r +"<br>");
+                            
                         }
+                        out.write("<br>");
                     }
                     else{
                         out.write(d.getDomanda()+"<br>");
@@ -30,6 +33,8 @@
                         }
                     }
                 }
+                
+                out.write("<br><input type='submit' value='Invia' class='submit'>");
 
                 %>
             </form>
