@@ -2,7 +2,21 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:700i');
 @import url('https://fonts.googleapis.com/css?family=Neuton');
 
- header ul {
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.content{
+    min-height: 410px;
+    margin-top: 200px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    text-shadow: 0.5px 0 0 #565656, -0.5px 0 0 #565656, 0 0.5px 0 #565656, 0 -0.5px 0 #565656, 0.5px 0.5px #565656, -0.5px -0.5px 0 #565656, 0.5px -0.5px 0 #565656, -0.5px 0.5px 0 #565656;
+}
+
+header ul {
     list-style-type: none;
     margin: -10px;
     padding: 0;
@@ -12,23 +26,13 @@
 .logoSurvily{
     float: left;
 }
-.userLogReg{
+.userLogout{
     float: right;
-}
-
-html {
-    position: relative;
-    height: 100%;
-}
-
-body{
-    font-family: 'Poppins', sans-serif;
 }
 
 li a {
     display: block;
     color: white;
-    text-align: center;
     padding-top: 19px;
     padding-bottom: 19px;
     padding-right: 10px;
@@ -36,12 +40,12 @@ li a {
     text-decoration: none;
 }
 
-#registratiButton{
+#logoutButton{
     margin-right: 25px;
 }
 
 /* Change the link color on hover */
-.userLogReg a:hover {
+.userLogout a:hover {
     color: #019612;
 }
 
@@ -51,118 +55,6 @@ li a {
     padding-left: 19px;
 }
 
-body{
-    width: 100%;
-    overflow-x: hidden;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.SpiegaUtenze{
-    
-    padding-top: 130px;
-    margin-left: -8px;
-    width: 102%;
-    height: 500px;
-    color: white;
-    text-align: center;
-    background-image: url("../images/backgroundhome.jpg");
-
-}
-
-@media only screen and (min-width : 150px) and (max-width : 780px) {
-  .spiegaUtenze{
-    padding-top: 30px;
-    height: 800px;
-  }
-}
-
-.SpiegaUtenze h1{
-    font-family: 'Neuton', sans-serif;
-    color: #383838;
-}
-
-
-.spiegaFree{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: white;
-    width: 400px;
-    height: 360px;
-    text-align: center;
-    border-radius: 10px;
-    clear: none; 
-    color:black;
-    position: relative;
-    display: inline-block;
-    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.SpiegaFree:hover{
-    -webkit-transform: scale(1.05, 1.05);
-    transform: scale(1.05, 1.05);
-}
-
-.SpiegaFree:hover::after{
-    opacity: 1;
-}
-
-@media only screen and (min-width : 150px) and (max-width : 780px) {
-  .spiegaFree{
-    width: 290px;
-  }
-}
-
-.cellContainer {
-  width: 50%;
-  float: left;
-}
-
-@media only screen and (min-width : 150px) and (max-width : 780px) {
-  .cellContainer {
-    float: none;
-    width: 100%;
-  }
-}
-
-.SpiegaPremium{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: white;
-    width: 400px;
-    height: 360px;
-    text-align: center;
-    border-radius: 10px;
-    color:black;
-    display:inline-block;
-    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-@media only screen and (min-width : 150px) and (max-width : 780px) {
-  .spiegaPremium{
-    margin-top: 20px;
-    width: 290px;
-  }
-}
-
-.SpiegaFree:before {
-    content: '';
-    width: 100%;
-    min-width: 100px;
-    max-width: 200px;
-    display: inline-block;
-}
-
-.SpiegaPremium:hover{
-    -webkit-transform: scale(1.05, 1.05);
-    transform: scale(1.05, 1.05);
-}
-
-.SpiegaPremium:hover::after{
-    opacity: 1;
-}
 .footer{
     position: absolute;
     width: 100%;
@@ -203,19 +95,6 @@ body{
 
 .footer a:hover {
     color: #019612;
-}
-
-.testoSpiegaUtenze{
-    text-align: left;
-    padding-left: 30px;
-}
-
-.listaSpiegazione{
-    list-style-image: url(../images/check.png);
-}
-
-.listaSpiegazione li{
-    padding-top: 10px;
 }
 
 .social{
