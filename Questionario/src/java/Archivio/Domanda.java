@@ -7,9 +7,18 @@ public class Domanda {
     private String domanda;
     private int idDomanda;
     private ArrayList<String> risposte;
+    private boolean noRisposte;
     private int id_questionario;
     private boolean multipla;
     private boolean aperta;
+
+    public boolean isNoRisposte() {
+        return noRisposte;
+    }
+
+    public void setNoRisposte(boolean noRisposte) {
+        this.noRisposte = noRisposte;
+    }
     
 
     public Domanda() {
@@ -71,8 +80,10 @@ public class Domanda {
 
     @Override
     public String toString() {
-        return "Domanda{" + "domanda=" + domanda + ", idDomanda=" + idDomanda + ", risposte=" + risposte + ", id_questionario=" + id_questionario + ", multipla=" + multipla + ", aperta=" + aperta + '}';
+        return "Domanda{" + "domanda=" + domanda + ", idDomanda=" + idDomanda + ", risposte=" + risposte + ", noRisposte=" + noRisposte + ", id_questionario=" + id_questionario + ", multipla=" + multipla + ", aperta=" + aperta + '}';
     }
+
+    
 
 
     
