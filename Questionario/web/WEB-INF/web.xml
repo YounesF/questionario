@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-    <servlet>
+      <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>Archivio.LoginServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>LogoutServlet</servlet-name>
-        <servlet-class>Archivio.LogoutServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>RecuperaServlet</servlet-name>
         <servlet-class>Archivio.RecuperaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RisposteUtenteServlet</servlet-name>
+        <servlet-class>Archivio.RisposteUtenteServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>VisualizzaServlet</servlet-name>
@@ -38,10 +38,6 @@
         <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>LogoutServlet</servlet-name>
-        <url-pattern>/LogoutServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>RecuperaServlet</servlet-name>
         <url-pattern>/RecuperaServlet</url-pattern>
     </servlet-mapping>
@@ -56,6 +52,10 @@
     <servlet-mapping>
         <servlet-name>DomandaServlet</servlet-name>
         <url-pattern>/DomandaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RisposteUtenteServlet</servlet-name>
+        <url-pattern>/RisposteUtenteServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>QuestionarioServlet</servlet-name>
