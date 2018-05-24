@@ -22,6 +22,7 @@ public class DomandaServlet extends HttpServlet {
             Questionario currentQuest = (Questionario) (session.getAttribute("Questionario"));
             ArrayList<Domanda> domande = new ArrayList<Domanda>();
             int cont = (Integer)session.getAttribute("contatore");
+            int freqSic = currentQuest.getFrequenzaSic();
             
             if(cont == 1){
                 session.setAttribute("domande", domande);
@@ -43,7 +44,6 @@ public class DomandaServlet extends HttpServlet {
             }
             
             try{
-                
                 if(request.getParameter("multipla").equals("multipla")){
                     d.setMultipla(true);
                 }
