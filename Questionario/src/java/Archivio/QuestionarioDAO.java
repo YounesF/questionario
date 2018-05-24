@@ -21,11 +21,12 @@ public class QuestionarioDAO {
         
         try{    
             conn = PostgreSQLJDBC.getConn();
-            pst = conn.prepareStatement("INSERT INTO questionario(numerodomande,costo,nome,utente_email) VALUES (?, ?, ?,?)",Statement.RETURN_GENERATED_KEYS);
+            pst = conn.prepareStatement("INSERT INTO questionario(numerodomande,costo,nome,utente_email,frequenza_sicurezza) VALUES (?, ?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
             pst.setInt(1, q.getNumeroDomande());
             pst.setDouble(2, q.getCosto());
             pst.setString(3, q.getNome());
             pst.setString(4, q.getEmail());
+            pst.setInt(5, q.getFrequenzaSic());
             pst.executeUpdate();
             
             String query = "SELECT idquestionario FROM questionario ORDER BY idquestionario DESC LIMIT 1"; 
@@ -34,8 +35,7 @@ public class QuestionarioDAO {
             rs.next();
             id = rs.getInt(1);
             
-            conn.close();
-            
+            conn.close();      
         }
         
         catch(Exception e){

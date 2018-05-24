@@ -1,10 +1,5 @@
-
 package Archivio;
 
-/**
- *
- * @author sala.stefano
- */
 public class Questionario {
 
     private String nome;
@@ -12,6 +7,7 @@ public class Questionario {
     private double costo;
     private String email;
     private int id;
+    private int frequenzaSic;
 
     public int getId() {
         return id;
@@ -22,11 +18,6 @@ public class Questionario {
     }
     
     public Questionario() {
-    }
-
-    @Override
-    public String toString() {
-        return "Questionario{" + "nome=" + nome + ", numeroDomande=" + numeroDomande + ", costo=" + costo + ", email=" + email + ", id=" + id + '}';
     }
 
     public String getEmail() {
@@ -64,6 +55,20 @@ public class Questionario {
     public void setCosto(double costo) {
         this.costo = costo;
     }
+
+    public int getFrequenzaSic() {
+        return frequenzaSic;
+    }
+
+    public void setFrequenzaSic(int frequenzaSic) {
+        this.frequenzaSic = frequenzaSic;
+    }
+
+    @Override
+    public String toString() {
+        return "Questionario{" + "nome=" + nome + ", numeroDomande=" + numeroDomande + ", costo=" + costo + ", email=" + email + ", id=" + id + ", frequenzaSic=" + frequenzaSic + '}';
+    }
+
     
     public void calcolaCosto(int numDomande){
         double costo = 0.0;
@@ -77,7 +82,4 @@ public class Questionario {
         setCosto(costo);
     }
 
-
-
-   
 }

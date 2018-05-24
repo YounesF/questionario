@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Archivio;
 
+import java.util.Random;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,10 +22,18 @@ public class QuestionarioServlet  extends HttpServlet {
             Questionario q = new Questionario();
             HttpSession session = request.getSession(true);	    
             int contatore = 1;
+            Random rand = new Random();
+            int range = 5 - 10 + 1;
+            
+            //numero casuale tra 5 e 10, ogni tot viene inserita domanda di sicurezza
+            int randomNum =  rand.nextInt(range) + 5;
+            
             
             q.setNumeroDomande(Integer.parseInt(request.getParameter("numeroDomande")));
             q.setNome(request.getParameter("nome"));
             q.calcolaCosto(Integer.parseInt(request.getParameter("numeroDomande")));
+            q.setFrequenzaSic(randomNum);
+            
             Utente currentUser = (Utente) (session.getAttribute("currentSessionUser")); 
             System.out.println(currentUser.getEmail());
             System.out.println(q.toString());
