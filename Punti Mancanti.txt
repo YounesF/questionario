@@ -4,4 +4,5 @@ Progetto:
 -controlli questionario(creazione domanda), login utente
 -recupero credenziali
 -questionario statico per selezione utenti
--cacciosegreto
+-ricordami
+-domande di sicurezza
