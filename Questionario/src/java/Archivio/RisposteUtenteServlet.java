@@ -28,10 +28,13 @@ public class RisposteUtenteServlet  extends HttpServlet {
             ArrayList<Domanda> questionarioVisual = (ArrayList<Domanda>) (session.getAttribute("questionarioVisual"));
             Utente utente=(Utente) session.getAttribute("currentSessionUser");
             ArrayList<Domanda> risposteDate = new ArrayList<Domanda>();
-            Domanda temp = new Domanda();
             ArrayList<String> risposte = new ArrayList<String>();
+            int cont=0;
             
             for(Domanda d:questionarioVisual){
+                
+                Domanda temp = new Domanda();
+                
                 temp.setIdDomanda(d.getIdDomanda());
                 try{
                     risposte = new ArrayList(Arrays.asList(request.getParameterValues(Integer.toString(d.getIdDomanda()))));
@@ -43,10 +46,10 @@ public class RisposteUtenteServlet  extends HttpServlet {
                 
                 System.out.println(temp);
                 risposteDate.add(temp);
-                 
             }
-            for(Domanda d:risposteDate){
-                System.out.println(d.toString());
+                    
+            for(Domanda da:risposteDate){
+                System.out.println("ru:"+da.toString());
             }
             
             RisposteUtenteDAO.insertDomanda(risposteDate, questionarioVisual.get(1).getId_questionario(), utente.getEmail());
