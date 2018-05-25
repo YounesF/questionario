@@ -39,7 +39,7 @@
                             Accedi
                         </span>
                     </div>
-                    <form class="login100-form validate-form" action="LoginServlet">
+                    <form class="login100-form validate-form" action="LoginServlet" method="post">
                         <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
                             <span class="label-input100">Email</span>
                             <input class="inputLogin"  placeholder="email" type="text" name="email">

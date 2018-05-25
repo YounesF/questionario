@@ -1,4 +1,5 @@
 
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" import="Archivio.*"%>
 <!DOCTYPE html>
   <html>
@@ -20,7 +21,6 @@
             </ul>
           </header>
           <div class="content">
-                Benvenuto ${cookie.cookieName.value}
             <input class="button" type="button" value="Crea Questionario" onclick="window.location.href='creazioneQuestionario.jsp'">
           </div>
           <footer class="footer">
@@ -49,8 +49,16 @@
                     response.sendRedirect("login.jsp");
                 }
                 
-                Utente currentUser = (Utente) (session.getAttribute("currentSessionUser"));               
+                Utente currentUser = (Utente) (session.getAttribute("currentSessionUser"));  
+                
+                ArrayList<Questionario> lista = new ArrayList<Questionario>();
+                
+                lista = ListaQuestionariDAO.lista();
+                
+                for(Questionario q: lista){
+                    out.write("<div><a href='http://localhost:8080/Questionario/visualizzaServlet?idquestionario="+q.getId()+"'>"+ q.getNome() +"</a></div><br>");
+                }
+
             %>
       </body>
-	
    </html>
