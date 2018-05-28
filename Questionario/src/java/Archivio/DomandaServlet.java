@@ -2,6 +2,7 @@ package Archivio;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +23,6 @@ public class DomandaServlet extends HttpServlet {
             Questionario currentQuest = (Questionario) (session.getAttribute("Questionario"));
             ArrayList<Domanda> domande = new ArrayList<Domanda>();
             int cont = (Integer)session.getAttribute("contatore");
-            int freqSic = currentQuest.getFrequenzaSic();
             
             if(cont == 1){
                 session.setAttribute("domande", domande);
@@ -53,10 +53,35 @@ public class DomandaServlet extends HttpServlet {
             catch(NullPointerException e){
             }
             
+            try{
+                if(currentQuest.getFrequenzaSic() == cont){
+                    int temp = currentQuest.getFrequenzaSic() - 5;
+                    Random rand = new Random();
+                    int range = temp - currentQuest.getFrequenzaSic() + 1;
+                    int randomNum =  rand.nextInt(range) + currentQuest.getFrequenzaSic();
+                    
+                    //mettere domanda sicurezza in posizione randomNum
+                    int tempCont = cont;
+                    cont = randomNum;
+                    String s1 = "Qual é il primo mese dell’anno?";
+                    String s2 = "In quale sport viene usata una pallina gialla?";
+                    String s3 = "Quale lingua si parla in Inghilterra?";
+                    
+                    
+                    
+                    cont = tempCont;
+                    
+                    QuestionarioDAO.modificaQuestionario(currentQuest);
+                    currentQuest.setNumeroDomande(currentQuest.getNumeroDomande() + 1);
+                    currentQuest.setFrequenzaSic(currentQuest.getFrequenzaSic() + 10);
+                }                    
+            }
+            catch(NullPointerException e){
+            }
+            
             domande.add(d);
             session.setAttribute("contatore", cont+1);
             d.setId_questionario(currentQuest.getId());
-            //sistemare
            
             if(currentQuest.getNumeroDomande()==1){
                 DomandaDAO.insertDomanda(domande);
@@ -70,7 +95,7 @@ public class DomandaServlet extends HttpServlet {
             System.out.println(d);
         } 
 
-        catch (Throwable theException){
+        catch(Throwable theException){
             System.out.println(theException); 
         }
     }

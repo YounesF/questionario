@@ -23,9 +23,9 @@ public class QuestionarioServlet  extends HttpServlet {
             HttpSession session = request.getSession(true);	    
             int contatore = 1;
             Random rand = new Random();
-            int range = 5 - 10 + 1;
+            int range = 6 - 10 + 1;
             
-            //numero casuale tra 5 e 10, ogni tot viene inserita domanda di sicurezza
+            //numero casuale tra 6 e 10, ogni tot viene inserita domanda di sicurezza
             int randomNum =  rand.nextInt(range) + 5;
             
             
