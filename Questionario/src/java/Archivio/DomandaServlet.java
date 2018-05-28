@@ -53,7 +53,7 @@ public class DomandaServlet extends HttpServlet {
             catch(NullPointerException e){
             }
             
-            try{
+            /*try{
                 if(currentQuest.getFrequenzaSic() == cont){
                     int temp = currentQuest.getFrequenzaSic() - 5;
                     Random rand = new Random();
@@ -77,7 +77,7 @@ public class DomandaServlet extends HttpServlet {
                 }                    
             }
             catch(NullPointerException e){
-            }
+            }*/
             
             domande.add(d);
             session.setAttribute("contatore", cont+1);
