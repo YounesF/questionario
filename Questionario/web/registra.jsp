@@ -49,43 +49,43 @@
                     <form class="login100-form validate-form" action="RegistraServlet" id="checkemailform">
                         <div class="wrap-input100 validate-input m-b-26" data-validate="Nome is required">
                             <span class="label-input100">Nome</span>
-                            <input class="input100" type="text" name="nome" placeholder="Inserisci nome">
+                            <input class="inputRegistra" type="text" name="nome" placeholder="Inserisci nome">
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 validate-input m-b-18" data-validate = "Cognome is required">
                             <span class="label-input100">Cognome</span>
-                            <input class="input100" type="text" name="cognome" placeholder="Inserisci cognome">
+                            <input class="inputRegistra" type="text" name="cognome" placeholder="Inserisci cognome">
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 validate-input m-b-18" id="email" data-validate = "Email is required">
                             <span class="label-input100">Email</span>
-                            <input class="input100" type="email" name="email" placeholder="Inserisci email">
+                            <input class="inputRegistra" type="email" name="email" placeholder="Inserisci email">
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 validate-input m-b-26" data-validate="Password is required">
                             <span class="label-input100">Password</span>
-                            <input class="input100" type="password" name="password" placeholder="Inserisci password">
+                            <input class="inputRegistra" type="password" name="password" placeholder="Inserisci password">
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 validate-input m-b-26" data-validate="ConfermaPassword is required">
                             <span class="label-input100">Conferma Password</span>
-                            <input class="input100" type="password" name="confermaPassword" placeholder="Conferma password">
+                            <input class="inputRegistra" type="password" name="confermaPassword" placeholder="Conferma password">
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 validate-input m-b-18" data-validate = "NumeroCellulare is required">
                             <span class="label-input100">Cellulare</span>
-                            <input class="input100" type="tel" name="cellulare" placeholder="Inserisci cellulare">
+                            <input class="inputRegistra" type="tel" name="cellulare" placeholder="Inserisci cellulare">
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 validate-input m-b-18" data-validate = "DataDiNascita is required">
                             <span class="label-input100">Data di nascita</span>
-                            <input class="input100" type="date" name="dataDiNascita">
+                            <input class="inputRegistra" type="date" name="dataDiNascita">
                             <span class="focus-input100"></span>
                         </div>
 
