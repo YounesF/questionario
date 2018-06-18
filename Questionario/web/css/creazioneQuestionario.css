@@ -1,0 +1,78 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18-mag-2018, 11.27.21
+    Author     : annoni.stefano
+*/
+
+/*------------------------------------------------------------------
+[ Creazione questionario]*/
+.divCreazioneQ {
+    position: absolute;
+    width: 245px;
+    height: 50px;
+    top: 38%;
+    left: 44%;
+    margin-left: -50px; 
+    margin-top: -25px; 
+}​
+
+.textAreaTitolo {
+    font-family: Poppins-Regular;
+    font-size: 25px;
+    color: #808080;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.creaQ-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 146px;
+    margin-top: 37px;
+    margin-bottom: -34px;
+    margin-left: 24%;
+    height: 30px;
+    background-color: #57b846;
+    border-radius: 25px;
+
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.creaQ-btn:hover {
+    background-color: #088A29;
+}
+
+.textTitolo {
+    margin-top: 20px;
+    margin-left: 27px;
+}
+
+.textTitolo1 {
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.creaQ-form {
+    width: 87%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 43px 88px 93px 190px;
+}

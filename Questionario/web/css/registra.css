@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18-mag-2018, 11.25.57
+    Author     : annoni.stefano
+*/
+
+/*------------------------------------------------------------------
+[ Div Registra ]*/
+
+.container-registra100-form-btn {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: -10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*------------------------------------------------------------------
+[Button Registra ]*/
+
+.registra100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 146px;
+    margin-top: -3px;
+    margin-bottom: -28px;
+    margin-left: 86px;
+    height: 30px;
+    background-color: #57b846;
+    border-radius: 25px;
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.registra100-form-btn:hover {
+    background-color: #088A29;
+}
+
+.inputRegistra{
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    width: 100%;
+    background: transparent;
+    padding: 15px 3px 10px 0px;
+    margin-bottom: -10px;
+}
